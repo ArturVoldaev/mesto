@@ -1,0 +1,14 @@
+/*подключение нормалайз*/
+@import url(../vendor/normalize.css);
+/*подключение нормалайз*/
+@import url(../vendor/fonts/inter.css);
+/*подключение блока body*/
+@import url(../blocks/body/body.css);
+/*подключение блока page*/
+@import url(../blocks/page/page.css);
+/*подключение блока page*/
+@import url(../blocks/header/header.css);
+/*подключение блока logo*/
+@import url(../blocks/logo/logo.css);
+/*подключение блока line*/
+@import url(../blocks/line/line.css);
