@@ -1,0 +1,7 @@
+.user__avatar-palce {
+  display: flex;
+  max-width: calc(100% - 760px);
+  border-radius: 50%;
+  background-size: contain;
+  background-image: url(../../../images/kusto.png);
+}

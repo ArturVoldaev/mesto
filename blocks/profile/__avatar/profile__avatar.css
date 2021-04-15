@@ -1,0 +1,11 @@
+.profile__avatar {
+  display: block;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  justify-self: flex-start;
+  max-width: calc(100% - 760px);
+  /*width: 100%;*/
+  border-radius: 50%;
+ 
+  }

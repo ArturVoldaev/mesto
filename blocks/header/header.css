@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
  /* border: 1px solid red;*/
-  max-width: calc(100% - (2*200px));
-  margin: 0 200px;
+  max-width: 100%;
+  margin: 0 calc((100% - 880px) / 2);
 }

@@ -12,3 +12,34 @@
 @import url(../blocks/logo/logo.css);
 /*подключение блока line*/
 @import url(../blocks/line/line.css);
+/*подключение блока profile*/
+@import url(../blocks/profile/profile.css);
+
+@import url(../blocks/user/user.css);
+@import url(../blocks/user/__avatar-palce/user__avatar-palce.css);
+
+
+@import url(../blocks/pr-info/pr-info.css);
+@import url(../blocks/pr-info/__name/pr-info__name.css);
+@import url(../blocks/pr-info/__button/pr-info__button.css);
+@import url(../blocks/pr-info/__discast/pr-info__discast.css);
+
+/*подключение блока addbutton*/
+@import url(../blocks/addbutton/addbutton.css);
+/*подключение блока elements*/
+@import url(../blocks/elements/elements.css);
+/*подключение блока element*/
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__img/element__img.css);
+@import url(../blocks/element/__name/element__name.css);
+@import url(../blocks/element/__like/element__like.css);
+
+
+
+
+
+
+
+
+
+
