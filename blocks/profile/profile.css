@@ -1,0 +1,11 @@
+.profile {
+  padding-top: 40px;
+  /*border: 1px salmon solid;*/
+  max-width: 100%;
+  margin: 0px calc((100% - 880px) /2);
+}
+@media (max-width: 880px){
+  .profile {
+    margin: 0 calc((100% - 680px) / 2);
+  }
+  }

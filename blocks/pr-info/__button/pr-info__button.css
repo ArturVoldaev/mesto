@@ -1,0 +1,38 @@
+.pr-info__button {
+  outline: none; 
+  width: 24px;
+  height: 24px;
+  background-color: #000000;
+  background-image: url(../../../images/Edit-Button.png);
+  align-self: start;
+  margin-left: 18px;
+  margin-top: 15px;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  font: 000 0px Arial;
+  padding: 0px 0px;
+  border-width: 0px;
+  border-style: none;
+  border-image: none;
+  border-radius: 0px;
+}
+.pr-info__button:hover {
+  opacity: 0.6;
+  box-sizing: border-box;
+  border-radius: 0px;
+  cursor: pointer;
+}
+@media (max-width: 880px){
+  .pr-info__button {
+    margin-top: 0px;
+  }
+  }

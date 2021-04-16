@@ -1,0 +1,16 @@
+.pr-info__discast {
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin: 16px 0px 0px;
+}
+@media (max-width: 880px){
+  .pr-info__discast {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  }

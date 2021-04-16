@@ -1,0 +1,26 @@
+.pr-info__name {
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  align-items: flex-start;
+  align-self: flex-start;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #FFFFFF;
+  margin-block-start: 0px;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+@media (max-width: 880px){
+  .pr-info__name {
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 33px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  }

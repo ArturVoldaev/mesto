@@ -1,0 +1,6 @@
+.user {
+  /*border: 1px solid salmon;*/
+  display:flex;
+  max-width: 100%;
+  flex-direction: row;
+}
