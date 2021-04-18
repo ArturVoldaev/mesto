@@ -1,0 +1,28 @@
+.pr-info__button {
+  width: 24px;
+  height: 24px;
+  background-color: #000000;
+  background-image: url(../../../images/Edit-Button.png);
+  background-position: center;
+  background-size: contain;
+  align-self: start;
+  margin-left: 18px;
+  margin-top: 15px;
+}
+.pr-info__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+@media (max-width: 900px){
+  .pr-info__button {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 700px){
+  .pr-info__button {
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    align-self: center;
+  }
+}
