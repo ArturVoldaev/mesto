@@ -1,0 +1,22 @@
+.pr-info {
+  /*border: 1px solid salmon;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  max-width: calc(100% - (394px + 150px));
+  margin-left: 30px;
+}
+@media (max-width: 900px){
+  .pr-info {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px){
+  .pr-info {
+    margin-left: 0px;
+    justify-content: center;
+  }
+}
