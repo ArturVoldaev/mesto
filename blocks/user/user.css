@@ -1,0 +1,11 @@
+.user {
+  /*border: 1px solid salmon;*/
+  display:flex;
+  width: 100%;
+  flex-direction: row;
+}
+@media (max-width: 700px){
+  .user {
+    flex-direction: column;
+  }
+}

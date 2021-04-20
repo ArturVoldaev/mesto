@@ -5,3 +5,9 @@
  align-self: start;
  margin-bottom: 41px;
 }
+@media (max-width: 700px){
+  .logo {
+    margin-left: 27px;
+    margin-bottom: 32px
+  }
+}
