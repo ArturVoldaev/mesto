@@ -1,0 +1,13 @@
+.user__avatar-palce {
+  display: flex;
+  max-width: 120px;
+  /*max-width: calc(100% - 760px);*/
+  border-radius: 50%;
+  background-size: contain;
+  background-image: url(../../../images/kusto.png);
+}
+@media (max-width: 700px){
+  .user__avatar-palce {
+    margin: 0px calc((100% - 120px) /2);
+  }
+}

@@ -1,0 +1,25 @@
+.addbutton {
+  padding: 0;
+  border-radius: 0px;
+  border: none;
+  border-width: 0px;
+  font: inherit;
+  color: inherit;
+}
+.addbutton:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+@media (max-width: 900px){
+  .addbutton {
+    margin: 33px 0px 0px 150px;
+  }
+}
+@media (max-width: 700px){
+  .addbutton {
+    width: 100%;
+    height: 50px;
+    margin: 36px 0px 0px 0px;
+    background-image: url(../../images/Add-Button-Large.svg);
+  }
+}
