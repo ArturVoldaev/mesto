@@ -21,7 +21,7 @@ input2.setAttribute('value', edit2);
 
 let formElement = document.querySelector(".form");
 let nameInput = document.querySelector(".form__style");
-let jobInput = document.querySelector(".form__style1");
+let jobInput = document.querySelector(".form__style-second");
 
 let po = document.querySelector(".user__name");
 let op = document.querySelector(".user__profession");
