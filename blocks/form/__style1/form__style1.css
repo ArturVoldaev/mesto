@@ -1,4 +1,4 @@
-.form__style {
+.form__style1 {
   text-rendering: auto;
   color: -internal-light-dark(black, white);
   letter-spacing: normal;
@@ -28,14 +28,15 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
+
+color: #000000;
 }
-.form__style:active {
+.form__style1:active {
   outline: none;
   border: none;
 }
 @media (max-width: 700px) {
-  .form__style {
+  .form__style1 {
     width: 238px;
   }
 }

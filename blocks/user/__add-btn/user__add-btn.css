@@ -1,0 +1,26 @@
+.user__add-btn {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  border-radius: 0px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: #000000;
+  object-fit: fill;
+  background-image: url(../../../images/Add-Button-min.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 700px){
+  .user__add-btn {
+    width: 282px;
+    margin-top: 36px;
+    background-image: url(../../../images/Add-Button-Large.svg);
+  }
+}
+.user__add-btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }

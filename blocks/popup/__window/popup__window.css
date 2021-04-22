@@ -1,4 +1,5 @@
 .popup__window {
+  border-radius: 10px;
   position: absolute;
   background: #ffffff;
   width: 430px;
@@ -7,4 +8,9 @@
   transform: translate(-50%, -50%);
   padding-top: 34px;
   padding-bottom: 37px;
+}
+@media (max-width: 700px){
+  .popup__window {
+    width: 282px;
+  }
 }

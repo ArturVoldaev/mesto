@@ -14,18 +14,17 @@
 @import url(../blocks/line/line.css);
 /*подключение блока profile*/
 @import url(../blocks/profile/profile.css);
-
+/*подключение блока user*/
 @import url(../blocks/user/user.css);
+@import url(../blocks/user/__place/user__place.css);
 @import url(../blocks/user/__avatar-palce/user__avatar-palce.css);
-
-
-@import url(../blocks/pr-info/pr-info.css);
-@import url(../blocks/pr-info/__name/pr-info__name.css);
-@import url(../blocks/pr-info/__button/pr-info__button.css);
-@import url(../blocks/pr-info/__discast/pr-info__discast.css);
-
-/*подключение блока addbutton*/
-@import url(../blocks/addbutton/addbutton.css);
+@import url(../blocks/user/__info/user__info.css);
+@import url(../blocks/user/__name/user__name.css);
+@import url(../blocks/user/__edit/user__edit.css);
+@import url(../blocks/user/__up/user__up.css);
+@import url(../blocks/user/__profession/user__profession.css);
+@import url(../blocks/user/__add-btn/user__add-btn.css);
+@import url(../blocks/user/__edit-img/user__edit-img.css);
 /*подключение блока elements*/
 @import url(../blocks/elements/elements.css);
 /*подключение блока element*/
@@ -42,12 +41,15 @@
 @import url(../blocks/popup/__open/popup__open.css);
 @import url(../blocks/popup/__non/popup__non.css);
 @import url(../blocks/popup/__heading/popup__heading.css);
+@import url(../blocks/popup/__close-img/popup__close-img.css);
 /*подключение блока button-save*/
 @import url(../blocks/button-save/button-save.css);
+@import url(../blocks/button-save/__img/button-save__img.css);
 /*подключение блока form*/
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__place/form__place.css);
 @import url(../blocks/form/__style/form__style.css);
+@import url(../blocks/form/__style1/form__style1.css);
 
 
 
