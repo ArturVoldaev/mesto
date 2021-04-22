@@ -14,8 +14,8 @@
   .form__place {
     margin-top: 75px;
   }
-}
-.form__place:nth-child(2) {
-  margin-top: 0px;
-  margin-bottom: 45px;
+  .form__place:nth-child(2) {
+    margin-top: 0px;
+    margin-bottom: 45px;
+  }
 }

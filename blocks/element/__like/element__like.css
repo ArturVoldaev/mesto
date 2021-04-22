@@ -1,9 +1,9 @@
 .element__like:active {
   background-image: url(../../../images/Union__black.svg);
-  outline: none; 
+  outline: none;
 }
-.element__like:focus { 
-  outline: none; 
+.element__like:focus {
+  outline: none;
 }
 .element__like {
   width: 22px;
@@ -11,8 +11,6 @@
   background-image: url(../../../images/Like.svg);
   margin-right: 5px;
   margin-top: 5px;
-
-  
   text-rendering: auto;
   color: white;
   letter-spacing: normal;
@@ -32,6 +30,6 @@
   border-style: outset;
   border-color: white;
   border-image: none;
-  border-radius: 0px
+  border-radius: 0px;
 
 }
