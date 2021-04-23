@@ -4,18 +4,10 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 54px;
-  margin-bottom: 30px;
-}
-.form__place:nth-child(1) {
-  margin-top: 0px;
   margin-bottom: 48px;
 }
 @media (max-width: 700px) {
   .form__place {
-    margin-top: 75px;
-  }
-  .form__place:nth-child(2) {
-    margin-top: 0px;
-    margin-bottom: 45px;
+    margin: 75px auto 45px;
   }
 }
