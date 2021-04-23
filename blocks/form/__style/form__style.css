@@ -12,7 +12,6 @@
   background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
   -webkit-rtl-ordering: logical;
   cursor: text;
-  margin: 0em;
   padding: 0px 0px;
   padding-bottom: 13px;
   border-width: 0px;
@@ -28,11 +27,17 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
+  margin: 54px 0 30px 0;
 }
 .form__style:active {
   outline: none;
   border: none;
 }
+.form__style:nth-child(2) {
+  margin: 0px 0 0px 0;
+}
+
+
 @media (max-width: 700px) {
   .form__style {
     width: 238px;

@@ -12,16 +12,16 @@ openButtonClick.addEventListener("click" , open);
 closeButtonClick.addEventListener("click" , open);
 
 let edit1 = document.querySelector(".user__name").innerHTML;
-let input1 = document.getElementById('name_form-1');
+let input1 = document.getElementById('name__form');
 input1.setAttribute('value', edit1);
 
 let edit2 = document.querySelector(".user__profession").innerHTML;
-let input2 = document.getElementById('name_form-2');
+let input2 = document.getElementById('profession__form');
 input2.setAttribute('value', edit2);
 
 let formElement = document.querySelector(".form");
-let nameInput = document.querySelector(".form__style");
-let jobInput = document.querySelector(".form__style-second");
+let nameInput = document.getElementById('name__form');
+let jobInput = document.getElementById('profession__form');
 
 let po = document.querySelector(".user__name");
 let op = document.querySelector(".user__profession");
