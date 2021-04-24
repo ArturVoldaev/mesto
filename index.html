@@ -5,27 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./pages/index.css">
-  <title>Mesto</title>
+  <title>Удивительные места России</title>
 </head>
 <body class="body">
   <div class="page">
     <header class="header">
       <img class="logo" src="./images/Vector.svg" alt="Логотип">
-      <div class="line"></div>
     </header >
     <main>
       <section class="">
         <div class="popup">
           <div class="popup__window">
-            <p class="popup__heading">Редактировать профиль</p>
+            <h2 class="popup__heading">Редактировать профиль</h2>
             <form class="form" name="hide">
               <div class="form__place">
-                <input class="form__style" type="text" value="0" id="name__form">
-                <input class="form__style" type="text" value="0" id="profession__form">
+                <input class="form__style" type="text" value="" name="name" id="name__form">
+                <input class="form__style" type="text" value="" name="profession" id="profession__form">
               </div>
-              <button type="submit" class="button-save"><img class="button-save__img" src="./images/Submit-Button-1280px.svg" alt="Кнопка сохранить форму"></button>
+              <button type="submit" class="button-save">Сохранить</button>
             </form>
-            <button type="submit" class="popup__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
+            <button type="button" class="popup__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
           </div>
         </div>
       </section>
@@ -35,44 +34,66 @@
             <img class="user__avatar-palce" src="./images/kusto.png" alt="Аватар">
             <div class="user__info">
               <div class="user__up">
-                <p class="user__name">Жак-Ив Кусто</p>
-                <button class="user__edit"><img class="user__edit-img" src="./images/Edit-Button-small.svg" alt="Кнопка редактировать пользователя"></button>
+                <h1 class="user__name">Жак-Ив Кусто</h1>
+                <button class="user__edit" type="button"><img class="user__edit-img" src="./images/Edit-Button-small.svg" alt="Кнопка редактировать пользователя"></button>
               </div>
               <p class="user__profession">Исследователь океана</p>
             </div>
           </div>
-          <button class="user__add-btn"></button>
+          <button class="user__add-btn" type="button"></button>
         </div>
       </section>
       <section class="elements">
-        <article class="element">
-          <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
-          <p class="element__name">Карачаев<button class="element__like"></button></p>
-        </article>
-        <article class="element">
-          <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
-          <p class="element__name">Карачаев<button class="element__like"></button></p>
-        </article>
-        <article class="element">
-          <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
-          <p class="element__name">Карачаев<button class="element__like"></button></p>
-        </article>
-        <article class="element">
-          <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
-          <p class="element__name">Карачаев<button class="element__like"></button></p>
-        </article>
-        <article class="element">
-          <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
-          <p class="element__name">Карачаев<button class="element__like"></button></p>
-        </article>
-        <article class="element">
-          <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
-          <p class="element__name">Карачаев<button class="element__like"></button></p>
-        </article>
+        <div class="elements__place">
+          <article class="element">
+            <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
+            <div class="element__conteiner">
+              <h2 class="element__name">Карачаев</h2>
+              <button class="element__like" type="button"></button>
+            </div>
+          </article>
+          <article class="element">
+            <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
+            <div class="element__conteiner">
+              <h2 class="element__name">Карачаев</h2>
+              <button class="element__like" type="button"></button>
+            </div>
+          </article>
+          <article class="element">
+            <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
+            <div class="element__conteiner">
+              <h2 class="element__name">Карачаев</h2>
+              <button class="element__like" type="button"></button>
+            </div>
+          </article>
+          <article class="element">
+            <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
+            <div class="element__conteiner">
+              <h2 class="element__name">Карачаев</h2>
+              <button class="element__like" type="button"></button>
+            </div>
+          </article>
+          <article class="element">
+            <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
+            <div class="element__conteiner">
+              <h2 class="element__name">Карачаев</h2>
+              <button class="element__like" type="button"></button>
+            </div>
+          </article>
+          <article class="element">
+            <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
+            <div class="element__conteiner">
+              <h2 class="element__name">Карачаев</h2>
+              <button class="element__like" type="button"></button>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
-    <footer class="footer">&copy; 2021 Артур Волдаев</footer>
+    <footer class="footer">
+      <p class="footer__author">&copy; 2021 Артур Волдаев</p>
+    </footer>
   </div>
-  <script src="script.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

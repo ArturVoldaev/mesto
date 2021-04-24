@@ -1,12 +1,7 @@
 .popup__heading {
-  display: flex;
-  flex-direction: row;
-  align-content: flex-end;
-  align-self: flex-end;
-  align-items: flex-end;
   max-width: 100%;
   margin: 0px calc(100% - (330px + 36px)) 0px calc(100% - (330px + 64px));
-  font-family: Inter;
+  font-family: 'inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -17,7 +12,7 @@
 }
 @media (max-width: 700px){
   .popup__heading {
-    margin: 0px auto;
+    margin: 0px calc((100% - 238px)/2);
     font-size: 18px;
     line-height: 22px;
     justify-content: center;

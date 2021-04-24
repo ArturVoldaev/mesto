@@ -1,6 +1,4 @@
 .profile {
-  display: flex;
-  flex-direction: row;
   padding-top: 40px;
   /*border: 1px salmon solid;*/
   max-width: 100%;
@@ -13,7 +11,6 @@
 }
 @media (max-width: 700px){
   .profile {
-    flex-direction: column;
     margin: 0 calc((100% - 282px) / 2);
   }
 }

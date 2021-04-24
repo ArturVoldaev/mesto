@@ -5,8 +5,9 @@
   flex-direction: row;
   align-items: center;
 }
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .user__place {
     flex-direction: column;
+    max-width: 282px;
   }
 }

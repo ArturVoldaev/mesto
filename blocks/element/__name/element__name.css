@@ -1,16 +1,12 @@
 .element__name {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  background-color: white;
-  font-family: Inter;
+  font-family: 'inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
-  margin-block-start: 25px;
-  margin-block-end: 31px;
-  margin-inline-start: 15px;
-  margin-inline-end: 21px;
+  margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

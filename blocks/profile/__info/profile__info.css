@@ -1,8 +1,0 @@
-.profile__info {
-  border: 1px solid salmon;
-  max-width: calc(100% - (150px + 394px));
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 22px 0px 25px 30px;  
-}

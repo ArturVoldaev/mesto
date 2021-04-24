@@ -1,10 +1,5 @@
 .pr-info__name {
-  display: flex;
-  flex-direction: row;
-  align-content: start;
-  align-items: flex-start;
-  align-self: flex-start;
-  font-family: Inter;
+  font-family: 'inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
@@ -17,7 +12,6 @@
 }
 @media (max-width: 900px){
   .pr-info__name {
-    font-weight: 500;
     font-size: 27px;
     line-height: 33px;
   }

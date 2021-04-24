@@ -1,5 +1,6 @@
 .user__profession {
-  font-family: Inter;
+  max-width: inherit;
+  font-family: 'inter', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
