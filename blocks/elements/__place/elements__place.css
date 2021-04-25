@@ -3,7 +3,6 @@
   grid-template-columns: repeat(3, 282px);
   grid-template-rows: repeat(2, 361px);
   gap: 20px 17px;
-  border-radius: 10px;
 }
 @media (max-width: 900px){
   .elements__place {

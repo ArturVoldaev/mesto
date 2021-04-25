@@ -3,5 +3,7 @@
   align-content: center;
   justify-content: space-between;
   background-color: white;
-  padding: 25px 21px 15px 31px;
+  padding: 25px 15px 31px 21px;
+  margin: -5px auto 0px;
+  border-radius:0 0 10px 10px;
 }

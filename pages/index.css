@@ -22,6 +22,7 @@
 @import url(../blocks/user/__up/user__up.css);
 @import url(../blocks/user/__profession/user__profession.css);
 @import url(../blocks/user/__add-btn/user__add-btn.css);
+@import url(../blocks/user/__add-btn-img/user__add-btn-img.css);
 @import url(../blocks/user/__edit-img/user__edit-img.css);
 /*подключение блока elements*/
 @import url(../blocks/elements/elements.css);

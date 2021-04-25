@@ -3,12 +3,6 @@
   padding-top: 67px;
   padding-bottom: 60px;
   margin: 0px calc((100% - 880px) /2);
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  color: #545454;
 }
 @media (max-width: 900px){
   .footer {
@@ -20,7 +14,5 @@
     padding-top: 48px;
     padding-bottom: 36px;
     margin: 0px calc((100% - 282px) / 2);
-    font-size: 14px;
-    line-height: 17px;
   }
 }

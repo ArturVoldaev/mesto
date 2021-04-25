@@ -11,7 +11,7 @@
   outline: none;
 }
 .element__like {
-  width: 22px;
+  min-width: 22px;
   height: 19px;
   background-image: url(../../../images/Like.svg);
   margin-right: 5px;

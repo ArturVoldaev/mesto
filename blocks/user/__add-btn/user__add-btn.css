@@ -2,22 +2,16 @@
   width: 150px;
   height: 50px;
   padding: 0;
-  border-radius: 0px;
-  border: none;
-  font: inherit;
-  color: inherit;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #FFFFFF;
   background-color: #000000;
-  object-fit: fill;
-  background-image: url(../../../images/Add-Button-min.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .user__add-btn {
     width: 282px;
     margin-top: 36px;
-    background-image: url(../../../images/Add-Button-Large.svg);
   }
 }
 .user__add-btn:hover {
