@@ -7,6 +7,16 @@ let jobInput = document.getElementById('profession__form');
 let po = document.querySelector(".user__name");
 let op = document.querySelector(".user__profession");
 let submit = document.querySelector(".form");
+let addButon = document.querySelector(".user__add-btn");
+let PopUpAddButon = document.querySelector(".popup-add");
+let CloseAddButton = document.querySelector(".popup-add__close");
+
+function openAddButton () {
+  PopUpAddButon.classList.toggle("popup-add_non");
+}
+function closeAddButton () {
+  PopUpAddButon.classList.remove("popup-add_non");
+}
 
 function open () {
   nameInput.value = po.textContent;
@@ -32,3 +42,6 @@ function formSubmitHandler (ev) {
 submit.addEventListener('submit', formSubmitHandler);
 openButtonClick.addEventListener("click" , open);
 closeButtonClick.addEventListener("click" , close);
+addButon.addEventListener("click" , openAddButton);
+CloseAddButton.addEventListener("click" , closeAddButton);
+

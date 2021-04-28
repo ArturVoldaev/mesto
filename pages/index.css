@@ -51,6 +51,11 @@
 @import url(../blocks/form/__style/form__style.css);
 
 
+@import url(../blocks/popup-add/popup-add.css);
+@import url(../blocks/popup-add/_non/popup-add_non.css);
+@import url(../blocks/popup-add/__close/popup-add__close.css);
+
+
 
 
 
