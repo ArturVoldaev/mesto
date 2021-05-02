@@ -32,10 +32,10 @@
             <h2 class="popup__heading">Новое место</h2>
             <form class="form" name="hide">
               <div class="form__place">
-                <input class="form__style" type="text" placeholder="Название" value="" name="name" id="">
-                <input class="form__style" type="text" placeholder="Ссылка на картинку" value="" name="profession" id="">
+                <input class="form__style" type="text" placeholder="Название" value="" name="name" id="NewPlace">
+                <input class="form__style" type="text" placeholder="Ссылка на картинку" value="" name="profession" id="NewPicture">
               </div>
-              <button type="submit" class="button-save">Создать</button>
+              <button type="submit" class="button-save" id="create">Создать</button>
             </form>
             <button type="button" class="popup-add__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
           </div>
@@ -60,7 +60,7 @@
       </section>
       <section class="elements">
         <div class="elements__place">
-          <article class="element">
+          <!--<article class="element">
             <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение знатного места">
             <div class="element__conteiner">
               <h2 class="element__name">Карачаев</h2>
@@ -101,13 +101,23 @@
               <h2 class="element__name">Карачаев</h2>
               <button class="element__like" type="button"></button>
             </div>
-          </article>
+          </article>-->
         </div>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__author">&copy; 2021 Артур Волдаев</p>
     </footer>
+    <template id="user">
+      <article class="element">
+        <img class="element__img" src="" alt="Изображение знатного места">
+        <a class="element__trash" href="#"><img src="./images/Group.svg" alt="Изображение корзины"></a>
+        <div class="element__conteiner">
+          <h2 class="element__name"></h2>
+         <button class="element__like" type="button"></button>
+        </div>
+      </article>
+    </template>
   </div>
   <script src="./scripts/script.js"></script>
 </body>
