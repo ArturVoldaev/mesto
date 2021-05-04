@@ -8,10 +8,9 @@ let po = document.querySelector(".user__name");
 let op = document.querySelector(".user__profession");
 let submit = document.querySelector(".form");
 let addButon = document.querySelector(".user__add-btn");
-let PopUpAddButon = document.querySelector(".popup-add");
-let CloseAddButton = document.querySelector(".popup-add__close");
+let PopUpAddButon = document.querySelector("#addButton");
+let CloseAddButton = document.querySelector("#addButton__close");
 let createButton = document.querySelector("#create");
-
 
 
 
@@ -24,10 +23,7 @@ function open () {
 function close () {
   PopUp.classList.remove("popup_non");
 }
-/*let edit1 = document.querySelector(".user__name");*/
-/*let input1 = document.getElementById('name__form');*/
-/*let edit2 = document.querySelector(".user__profession");*/
-/*let input2 = document.getElementById('profession__form');*/
+
 
 function formSubmitHandler (ev) {
   ev.preventDefault();
@@ -70,12 +66,11 @@ const initialCards = [
   }
 ];
 
-
-function closeAddButton () {
-  PopUpAddButon.classList.remove("popup-add_non");
-}
 function openAddButton () {
-  PopUpAddButon.classList.toggle("popup-add_non");
+  PopUpAddButon.classList.toggle("popup_non");
+}
+function closeAddButton () {
+  PopUpAddButon.classList.remove("popup_non");
 }
 
 const placeTemplate = document.querySelector("#user"); // наша заготовка
@@ -83,58 +78,59 @@ const OnPage = document.querySelector('.elements__place'); // место для 
 const deleteButton = document.querySelector('.element__trash');// выберем кнопку удаления
 const inputPlace = document.getElementById("NewPlace");// поле ввода нового места
 const inputUrl = document.getElementById("NewPicture");// адрес новой картинки
+const closeImg = document.getElementById("image__close");// кнопка закрыть в попапе с картинкой.
+const popUpImg = document.querySelector("#image");
 
+closeImg.addEventListener("click", closepopUpImg);
+function closepopUpImg () {
+  popUpImg.classList.remove("popup_non");
+}
 
+function render (place, card) {
+  const userElement = placeTemplate.content.querySelector('.element').cloneNode(true);
+  const placeCard = userElement.querySelector('.element__name');
+  const placeImg = userElement.querySelector('.element__img');
+  const remove = userElement.querySelector('.element__trash');
 
+  placeCard.textContent = place;
+  placeImg.src = card;
 
+  remove.addEventListener("click", function(evt){
+    evt.preventDefault();
+    userElement.closest(".element").remove()
+  });
 
+  userElement.querySelector('.element__like').addEventListener('click', function (evt) {
+    const like = evt.target;
+    like.classList.toggle("element__like_active");
+  });
 
-function re (place, card) {
-const userElement = placeTemplate.content.querySelector('.element').cloneNode(true);// создаем клона
-userElement.querySelector('.element__name').textContent = place; // присваеваем значение name
-userElement.querySelector('.element__img').src = card;
-const remove = userElement.querySelector('.element__trash');// выберем кнопку удаления
+  placeImg.addEventListener("click" ,function ( ){
+    showImg(place, card)
+  });
 
-remove.addEventListener("click", function(evt){
-  evt.preventDefault();
-  userElement.closest(".element").remove()
-});
-
-OnPage.append(userElement);//добовляем на страницу
+  OnPage.prepend(userElement);
 }
 
 createButton.addEventListener ("click", function(ev) {
   ev.preventDefault();
-  re (inputPlace.value, inputUrl.value)
+  render (inputPlace.value, inputUrl.value)
   closeAddButton()
 });
 
 initialCards.forEach(function (initialCards) {
-  re (initialCards.name, initialCards.link );
+  render (initialCards.name, initialCards.link );
 });
 
+function showImg (argText, argImg) {
+  popUpImg.classList.toggle("popup_non");
+  const textTake = document.querySelector(".popup__image-text");
+  const imgTake = document.querySelector(".popup__container-img");
+  textTake.textContent = argText;
+  imgTake.src = argImg;
+}
 
 
-
-
- /* const userElement = placeTemplate.content.querySelector('.element').cloneNode(true);// создаем клона
-  userElement.querySelector('.element__name').textContent = initialCards.name; // присваеваем значение name
-  userElement.querySelector('.element__img').src = initialCards.link;//присваеваем значение link;
-  OnPage.append(userElement);*/
-
-/*createButton.addEventListener ("click", function(evt){
-  evt.preventDefault();
-  const userElement = placeTemplate.content.querySelector('.element').cloneNode(true);// создаем клона
-  userElement.querySelector('.element__name').textContent = inputPlace.value ; // присваеваем значение name
-  userElement.querySelector('.element__img').src = inputUrl.value;
-  OnPage.append(userElement);//добовляем на страницу
-  closeAddButton ()
-})*/
-
-
-
-//userElement.querySelector('.element__name').textContent = initialCards.name; // присваеваем значение name
-//userElement.querySelector('.element__img').src = initialCards.link;//присваеваем значение link
 
 
 

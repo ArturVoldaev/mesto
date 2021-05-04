@@ -19,25 +19,32 @@
             <h2 class="popup__heading">Редактировать профиль</h2>
             <form class="form" name="hide">
               <div class="form__place">
-                <input class="form__style" type="text" value="" name="name" id="name__form">
-                <input class="form__style" type="text" value="" name="profession" id="profession__form">
+                <input class="form__style" type="text" value="" name="name" autocomplete="off" id="name__form">
+                <input class="form__style" type="text" value="" name="profession" autocomplete="off" id="profession__form">
               </div>
               <button type="submit" class="button-save">Сохранить</button>
             </form>
             <button type="button" class="popup__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
           </div>
         </div>
-        <div class="popup-add">
+        <div class="popup" id = "addButton">
           <div class="popup__window">
             <h2 class="popup__heading">Новое место</h2>
             <form class="form" name="hide">
               <div class="form__place">
-                <input class="form__style" type="text" placeholder="Название" value="" name="name" id="NewPlace">
-                <input class="form__style" type="text" placeholder="Ссылка на картинку" value="" name="profession" id="NewPicture">
+                <input class="form__style" type="text" placeholder="Название" value="" name="name" autocomplete="off" id="NewPlace">
+                <input class="form__style" type="text" placeholder="Ссылка на картинку" value="" name="profession" autocomplete="off" id="NewPicture">
               </div>
               <button type="submit" class="button-save" id="create">Создать</button>
             </form>
-            <button type="button" class="popup-add__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
+            <button type="button" class="popup__close" id = "addButton__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
+          </div>
+        </div>
+        <div class="popup" id = "image">
+          <div class="popup__container">
+            <img class="popup__container-img" src="" alt="Изображение добавленное пользователем">
+            <h2 class="popup__image-text"></h2>
+            <button type="button" class="popup__close" id = "image__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
           </div>
         </div>
       </section>
@@ -110,10 +117,10 @@
     </footer>
     <template id="user">
       <article class="element">
-        <img class="element__img" src="" alt="Изображение знатного места">
+        <img class="element__img" alt="Изображение знатного места">
         <a class="element__trash" href="#"><img src="./images/Group.svg" alt="Изображение корзины"></a>
         <div class="element__conteiner">
-          <h2 class="element__name"></h2>
+          <h2 class="element__name">Новое место</h2>
          <button class="element__like" type="button"></button>
         </div>
       </article>

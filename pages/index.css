@@ -41,6 +41,9 @@
 /*подключение блока popup*/
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__window/popup__window.css);
+@import url(../blocks/popup/__container-img/popup__container-img.css);
+@import url(../blocks/popup/__image-text/popup__image-text.css);
+@import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/_non/popup_non.css);
 @import url(../blocks/popup/__heading/popup__heading.css);
@@ -52,10 +55,6 @@
 @import url(../blocks/form/__place/form__place.css);
 @import url(../blocks/form/__style/form__style.css);
 
-
-@import url(../blocks/popup-add/popup-add.css);
-@import url(../blocks/popup-add/_non/popup-add_non.css);
-@import url(../blocks/popup-add/__close/popup-add__close.css);
 
 
 
