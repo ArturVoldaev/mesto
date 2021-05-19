@@ -17,6 +17,24 @@ const fieldPlace = document.getElementById("NewPlace");// поле ввода н
 const fieldUrl = document.getElementById("NewPicture");// адрес новой картинки
 const buttonImgCross = document.getElementById("image__close");// кнопка закрыть в попапе с картинкой.
 const popupImg = document.querySelector("#image");
+const overLay = document.querySelector('.popup');
+
+function closePopByMouse () {
+  const popupArray = Array.from(document.querySelectorAll(".popup"));
+  popupArray.forEach( elem => {
+    elem.addEventListener("click", (ev) => {
+      if (ev.target === ev.currentTarget) {
+        ev.target.classList.remove("popup_non")
+      }
+    })
+  })
+}
+
+function closePopByButton (ev) {
+      if (ev.key === "Escape") {
+        closePopup(document.querySelector(".popup_non"))
+      }
+}
 
 function openPopup(popup) {
   popup.classList.add("popup_non");
@@ -59,7 +77,7 @@ function render (place, card) {
     like.classList.toggle("element__like_active");
   });
 
-  placeImg.addEventListener("click" ,function ( ){
+  placeImg.addEventListener("click" ,function (){
     showImg(place, card)
   });
 
@@ -108,3 +126,5 @@ buttonNewCardCreate.addEventListener ("submit", function(ev) {
   closePopup (popupNewCard)
   resetForm (buttonNewCardCreate)
 });
+
+document.addEventListener ("keydown", closePopByButton);

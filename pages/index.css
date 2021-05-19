@@ -54,15 +54,7 @@
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__place/form__place.css);
 @import url(../blocks/form/__style/form__style.css);
+@import url(../blocks/form/__style/_type/form__style_type_error.css);
 @import url(../blocks/form/__style-profession/form__style-profession.css);
-
-
-
-
-
-
-
-
-
-
-
+@import url(../blocks/form/__style-error/form__style-error.css);
+@import url(../blocks/form/__style-error/_active/form__style-error_active.css);

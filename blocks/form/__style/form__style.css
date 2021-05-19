@@ -7,18 +7,19 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  margin: 0px 0 30px 0;
+  margin: 0px 0 5px 0;
   display: flex;
   text-align: start;
   padding: 0px 0px;
   padding-bottom: 13px;
+  outline: none;
 }
 .form__style:active {
   outline: none;
   border: none;
 }
 .form__style:nth-child(2) {
-  margin: 0px 0 0px 0;
+  margin: 13px 0 0px 0;
 }
 @media (max-width: 700px) {
   .form__style {
