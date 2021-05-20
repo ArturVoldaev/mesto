@@ -26,5 +26,6 @@ const initialCards = [
 ];
 
 initialCards.forEach(function (initialCards) {
-  render (initialCards.name, initialCards.link );
+  const arrayCards = render(initialCards.name, initialCards.link );
+  addCard(arrayCards)
 });

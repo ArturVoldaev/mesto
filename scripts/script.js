@@ -1,7 +1,6 @@
 const buttonEdit = document.querySelector(".user__edit");
 const popupProfile = document.querySelector("#editProfile");
 const buttonEditCross = document.querySelector(".popup__close");
-const formElement = document.querySelector(".form");
 const nameInput = document.querySelector('.form__style');
 const jobInput = document.querySelector('.form__style-profession');
 const fieldName = document.querySelector(".user__name");
@@ -17,14 +16,20 @@ const fieldPlace = document.getElementById("NewPlace");// поле ввода н
 const fieldUrl = document.getElementById("NewPicture");// адрес новой картинки
 const buttonImgCross = document.getElementById("image__close");// кнопка закрыть в попапе с картинкой.
 const popupImg = document.querySelector("#image");
-const overLay = document.querySelector('.popup');
+const textCard = document.querySelector(".popup__image-text");
+const imgCard = document.querySelector(".popup__container-img");
+const element = document.querySelector(".element");
+const buttonSubmitCreation = document.querySelector("#create");
+
+
+
 
 function closePopByMouse () {
   const popupArray = Array.from(document.querySelectorAll(".popup"));
   popupArray.forEach( elem => {
     elem.addEventListener("click", (ev) => {
       if (ev.target === ev.currentTarget) {
-        ev.target.classList.remove("popup_non")
+        closePopup(ev.target)
       }
     })
   })
@@ -38,10 +43,12 @@ function closePopByButton (ev) {
 
 function openPopup(popup) {
   popup.classList.add("popup_non");
+  document.addEventListener ("keydown", closePopByButton);
 }
 
 function closePopup(popup) {
   popup.classList.remove("popup_non");
+  document.addEventListener ("keydown", closePopByButton);
 }
 
 function openPopupProfile () {
@@ -58,40 +65,38 @@ function handlFormSubmit (ev) {
 }
 
 function render (place, card) {
-  const userElement = placeTemplate.content.querySelector('.element').cloneNode(true);
-  const placeCard = userElement.querySelector('.element__name');
-  const placeImg = userElement.querySelector('.element__img');
-  const trashButton = userElement.querySelector('.element__trash');
+  const newCard = placeTemplate.content.querySelector('.element').cloneNode(true);
+  const placeCard = newCard.querySelector('.element__name');
+  const placeImg = newCard.querySelector('.element__img');
+
 
   placeCard.textContent = place;
   placeImg.src = card;
   placeImg.alt = "Изображение знатного места"
 
-  trashButton.addEventListener("click", function(evt){
+  newCard.querySelector('.element__trash').addEventListener("click", function(evt){
     evt.preventDefault();
-    userElement.closest(".element").remove()
+    newCard.closest(".element").remove()
   });
 
-  userElement.querySelector('.element__like').addEventListener('click', function (evt) {
+  newCard.querySelector('.element__like').addEventListener('click', function (evt) {
     const like = evt.target;
     like.classList.toggle("element__like_active");
   });
 
-  placeImg.addEventListener("click" ,function (){
+  placeImg.addEventListener("click" ,function () {
     showImg(place, card)
   });
 
-  createCard(placePage, userElement);
+  return newCard;
 }
 
-function createCard (cardContainer, nameClone) {
-  cardContainer.prepend(nameClone);
+function addCard (newCard) {
+  placePage.prepend(newCard);
 }
 
 function showImg (argText, argImg) {
   openPopup(popupImg);
-  const textCard = document.querySelector(".popup__image-text");
-  const imgCard = document.querySelector(".popup__container-img");
   textCard.textContent = argText;
   imgCard.src = argImg;
 }
@@ -122,9 +127,11 @@ buttonImgCross.addEventListener("click", function () {
 
 buttonNewCardCreate.addEventListener ("submit", function(ev) {
   ev.preventDefault()
-  render (fieldPlace.value, fieldUrl.value)
+  const cardInputs = render (fieldPlace.value, fieldUrl.value)
+  addCard (cardInputs)
   closePopup (popupNewCard)
   resetForm (buttonNewCardCreate)
+  buttonSubmitCreation.disabled = true;
 });
 
-document.addEventListener ("keydown", closePopByButton);
+
