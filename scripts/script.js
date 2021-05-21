@@ -18,11 +18,7 @@ const buttonImgCross = document.getElementById("image__close");// кнопка �
 const popupImg = document.querySelector("#image");
 const textCard = document.querySelector(".popup__image-text");
 const imgCard = document.querySelector(".popup__container-img");
-const element = document.querySelector(".element");
 const buttonSubmitCreation = document.querySelector("#create");
-
-
-
 
 function closePopByMouse () {
   const popupArray = Array.from(document.querySelectorAll(".popup"));
@@ -48,7 +44,7 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove("popup_non");
-  document.addEventListener ("keydown", closePopByButton);
+  document.removeEventListener('keydown', closePopByButton);
 }
 
 function openPopupProfile () {
@@ -68,7 +64,6 @@ function render (place, card) {
   const newCard = placeTemplate.content.querySelector('.element').cloneNode(true);
   const placeCard = newCard.querySelector('.element__name');
   const placeImg = newCard.querySelector('.element__img');
-
 
   placeCard.textContent = place;
   placeImg.src = card;
@@ -127,8 +122,8 @@ buttonImgCross.addEventListener("click", function () {
 
 buttonNewCardCreate.addEventListener ("submit", function(ev) {
   ev.preventDefault()
-  const cardInputs = render (fieldPlace.value, fieldUrl.value)
-  addCard (cardInputs)
+  const cardElement = render (fieldPlace.value, fieldUrl.value)
+  addCard (cardElement)
   closePopup (popupNewCard)
   resetForm (buttonNewCardCreate)
   buttonSubmitCreation.disabled = true;
