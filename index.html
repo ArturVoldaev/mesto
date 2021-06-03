@@ -17,7 +17,7 @@
         <div class="popup" id = "editProfile">
           <div class="popup__window">
             <h2 class="popup__heading">Редактировать профиль</h2>
-            <form class="form" name="hide" novalidate>
+            <form class="form" id="proFile" name="hide" novalidate>
               <div class="form__place">
                 <input class="form__style" type="text" value="Жак-Ив Кусто" name="name" autocomplete="off" id="name__form" minlength="2" maxlength="40" required>
                 <span class="form__style-error" id="name__form-error"></span>
@@ -130,9 +130,6 @@
       </article>
     </template>
   </div>
-  <script src="./scripts/script.js"></script>
-  <script src = "./scripts/cards.js"></script>
-  <script src="./scripts/validate.js"></script>
-  <script src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>

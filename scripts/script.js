@@ -1,3 +1,6 @@
+import { Card } from "./card.js";
+import { FormValidator } from "./formValidator.js";
+
 const buttonEdit = document.querySelector(".user__edit");
 const popupProfile = document.querySelector("#editProfile");
 const buttonEditCross = document.querySelector(".popup__close");
@@ -10,15 +13,58 @@ const buttonNewCard = document.querySelector(".user__add-btn");
 const popupNewCard = document.querySelector("#addButton");
 const buttonNewCardCross = document.querySelector("#addButton__close");
 const buttonNewCardCreate = document.querySelector("#buttonNewPlace");
-const placeTemplate = document.querySelector("#user"); // наша заготовка
 const placePage = document.querySelector('.elements__place'); // место для вставки заготовок
 const fieldPlace = document.getElementById("NewPlace");// поле ввода нового места
 const fieldUrl = document.getElementById("NewPicture");// адрес новой картинки
-const buttonImgCross = document.getElementById("image__close");// кнопка закрыть в попапе с картинкой.
-const popupImg = document.querySelector("#image");
-const textCard = document.querySelector(".popup__image-text");
-const imgCard = document.querySelector(".popup__container-img");
 const buttonSubmitCreation = document.querySelector("#create");
+const inputProfile = document.getElementById("proFile");
+const popupImg = document.getElementById("image");
+const buttonImgCross = document.getElementById("image__close");
+
+const configSelectors = {
+  formSelector: ".form",
+  inputSelector: ".form__style",
+  submitButtonSelector: ".button-save",
+  inputErrorClass: ".form__style_type_error",
+  errorActiveClass: ".form__style-error_active",
+};
+
+const formProfile = new FormValidator(configSelectors, inputProfile);
+const formCardAdd = new FormValidator(configSelectors, buttonNewCardCreate);
+
+const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
+
+initialCards.forEach((initialCards) => {
+  const arrayCards = new Card(initialCards, '#user');
+  const cardElem = arrayCards.createCard()
+  openImage(cardElem)
+  addCard(cardElem)
+});
 
 function closePopByMouse () {
   const popupArray = Array.from(document.querySelectorAll(".popup"));
@@ -32,9 +78,9 @@ function closePopByMouse () {
 }
 
 function closePopByButton (ev) {
-      if (ev.key === "Escape") {
-        closePopup(document.querySelector(".popup_non"))
-      }
+  if (ev.key === "Escape") {
+   closePopup(document.querySelector(".popup_non"))
+  }
 }
 
 function openPopup(popup) {
@@ -60,49 +106,28 @@ function handlFormSubmit (ev) {
   closePopup(popupProfile)
 }
 
-function render (place, card) {
-  const newCard = placeTemplate.content.querySelector('.element').cloneNode(true);
-  const placeCard = newCard.querySelector('.element__name');
-  const placeImg = newCard.querySelector('.element__img');
-
-  placeCard.textContent = place;
-  placeImg.src = card;
-  placeImg.alt = "Изображение знатного места"
-
-  newCard.querySelector('.element__trash').addEventListener("click", function(evt){
-    evt.preventDefault();
-    newCard.closest(".element").remove()
-  });
-
-  newCard.querySelector('.element__like').addEventListener('click', function (evt) {
-    const like = evt.target;
-    like.classList.toggle("element__like_active");
-  });
-
-  placeImg.addEventListener("click" ,function () {
-    showImg(place, card)
-  });
-
-  return newCard;
-}
-
-function addCard (newCard) {
-  placePage.prepend(newCard);
-}
-
-function showImg (argText, argImg) {
-  openPopup(popupImg);
-  textCard.textContent = argText;
-  imgCard.src = argImg;
+function addCard (cardElem) {
+  placePage.prepend(cardElem);
 }
 
 function resetForm (idForm) {
   idForm.reset()
 }
 
+function openImage(cardElem) {
+  const cardImage = cardElem.querySelector('.element__img');
+  cardImage.addEventListener('click', function() {
+      openPopup(popupImg);
+  });
+}
+
 buttonEditSubmit.addEventListener('submit', handlFormSubmit);
 
 buttonEdit.addEventListener("click" , openPopupProfile);
+
+buttonImgCross.addEventListener('click', function() {
+   closePopup(popupImg)
+});
 
 buttonEditCross.addEventListener("click" , function () {
   closePopup(popupProfile)
@@ -116,17 +141,19 @@ buttonNewCardCross.addEventListener("click" , function() {
   closePopup(popupNewCard)
 });
 
-buttonImgCross.addEventListener("click", function () {
-  closePopup(popupImg)
-});
-
 buttonNewCardCreate.addEventListener ("submit", function(ev) {
   ev.preventDefault()
-  const cardElement = render (fieldPlace.value, fieldUrl.value)
-  addCard (cardElement)
-  closePopup (popupNewCard)
-  resetForm (buttonNewCardCreate)
+  const object = {
+    name: fieldPlace.value,
+    link: fieldUrl.value,
+  }
+  const newCardElement = new Card( object, '#user')
+  const newCard = newCardElement.createCard();
+  addCard(newCard)
+  resetForm(buttonNewCardCreate)
   buttonSubmitCreation.disabled = true;
 });
 
-
+formProfile.enableValidation();
+formCardAdd.enableValidation();
+closePopByMouse ()
