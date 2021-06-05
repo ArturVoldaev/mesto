@@ -29,10 +29,10 @@
             <button type="button" class="popup__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
           </div>
         </div>
-        <div class="popup" id = "addButton">
+        <div class="popup popup_type_add-place" id = "addButton">
           <div class="popup__window">
             <h2 class="popup__heading">Новое место</h2>
-            <form class="form" id="buttonNewPlace" name="hide" novalidate>
+            <form class="form form_type_addPlace" id="buttonNewPlace" name="hide" novalidate>
               <div class="form__place">
                 <input class="form__style" type="text" placeholder="Название" value="" name="name" autocomplete="off" id="NewPlace" minlength="2" maxlength="30" required>
                 <span class="form__style-error" id="NewPlace-error"></span>
@@ -44,7 +44,7 @@
             <button type="button" class="popup__close" id = "addButton__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
           </div>
         </div>
-        <div class="popup" id = "image">
+        <div class="popup popup_type_big-img" id = "image">
           <div class="popup__container">
             <img class="popup__container-img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение добавленное пользователем">
             <h2 class="popup__image-text">Новое место</h2>

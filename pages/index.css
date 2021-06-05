@@ -48,6 +48,8 @@
 @import url(../blocks/popup/_non/popup_non.css);
 @import url(../blocks/popup/__heading/popup__heading.css);
 @import url(../blocks/popup/__close-img/popup__close-img.css);
+@import url(../blocks/popup/_type/popup_type_big-img.css);
+@import url(../blocks/popup/_type/popup_type_add-place.css);
 /*подключение блока button-save*/
 @import url(../blocks/button-save/button-save.css);
 /*подключение блока form*/
@@ -58,3 +60,4 @@
 @import url(../blocks/form/__style-profession/form__style-profession.css);
 @import url(../blocks/form/__style-error/form__style-error.css);
 @import url(../blocks/form/__style-error/_active/form__style-error_active.css);
+@import url(../blocks/form/_type/form_type_addPlace.css);

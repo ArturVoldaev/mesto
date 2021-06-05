@@ -20,6 +20,8 @@ const buttonSubmitCreation = document.querySelector("#create");
 const inputProfile = document.getElementById("proFile");
 const popupImg = document.getElementById("image");
 const buttonImgCross = document.getElementById("image__close");
+const formNewPlace = document.querySelector(".form_type_addPlace")
+const popupAddPlace = document.querySelector(".popup_type_add-place")
 
 const configSelectors = {
   formSelector: ".form",
@@ -77,13 +79,13 @@ function closePopByMouse () {
   })
 }
 
-function closePopByButton (ev) {
+export function closePopByButton (ev) {
   if (ev.key === "Escape") {
    closePopup(document.querySelector(".popup_non"))
   }
 }
 
-function openPopup(popup) {
+export function openPopup(popup) {
   popup.classList.add("popup_non");
   document.addEventListener ("keydown", closePopByButton);
 }
@@ -114,7 +116,7 @@ function resetForm (idForm) {
   idForm.reset()
 }
 
-function openImage(cardElem) {
+export function openImage(cardElem) {
   const cardImage = cardElem.querySelector('.element__img');
   cardImage.addEventListener('click', function() {
       openPopup(popupImg);
@@ -150,7 +152,8 @@ buttonNewCardCreate.addEventListener ("submit", function(ev) {
   const newCardElement = new Card( object, '#user')
   const newCard = newCardElement.createCard();
   addCard(newCard)
-  resetForm(buttonNewCardCreate)
+  resetForm(formNewPlace)
+  closePopup(popupAddPlace)
   buttonSubmitCreation.disabled = true;
 });
 
