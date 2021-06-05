@@ -14,14 +14,14 @@
     </header >
     <main>
       <section class="">
-        <div class="popup" id = "editProfile">
+        <div class="popup popup_type_edit-profile" id = "editProfile">
           <div class="popup__window">
             <h2 class="popup__heading">Редактировать профиль</h2>
-            <form class="form" id="proFile" name="hide" novalidate>
+            <form class="form form_type_edit-profile" id="proFile" name="editUser" novalidate>
               <div class="form__place">
-                <input class="form__style" type="text" value="Жак-Ив Кусто" name="name" autocomplete="off" id="name__form" minlength="2" maxlength="40" required>
+                <input class="form__style form__style_type_name" type="text" value="Жак-Ив Кусто" name="name" autocomplete="off" id="name__form" minlength="2" maxlength="40" required>
                 <span class="form__style-error" id="name__form-error"></span>
-                <input class="form__style form__style-profession" type="text" value="Исследователь океана" name="profession" autocomplete="off" id="profession__form" minlength="2" maxlength="200" required>
+                <input class="form__style form__style_type_profession" type="text" value="Исследователь океана" name="profession" autocomplete="off" id="profession__form" minlength="2" maxlength="200" required>
                 <span class="form__style-error" id="profession__form-error"></span>
               </div>
               <button type="submit" class="button-save">Сохранить</button>
@@ -32,11 +32,11 @@
         <div class="popup popup_type_add-place" id = "addButton">
           <div class="popup__window">
             <h2 class="popup__heading">Новое место</h2>
-            <form class="form form_type_addPlace" id="buttonNewPlace" name="hide" novalidate>
+            <form class="form form_type_add-place" id="buttonNewPlace" name="newPlace" novalidate>
               <div class="form__place">
-                <input class="form__style" type="text" placeholder="Название" value="" name="name" autocomplete="off" id="NewPlace" minlength="2" maxlength="30" required>
+                <input class="form__style" type="text" placeholder="Название" value="" name="placeName" autocomplete="off" id="NewPlace" minlength="2" maxlength="30" required>
                 <span class="form__style-error" id="NewPlace-error"></span>
-                <input class="form__style form__style-profession" type="url" placeholder="Ссылка на картинку" value="" name="profession" autocomplete="off" id="NewPicture" required>
+                <input class="form__style form__style_type_link" type="url" placeholder="Ссылка на картинку" value="" name="placeLink" autocomplete="off" id="NewPicture" required>
                 <span class="form__style-error" id="NewPicture-error"></span>
               </div>
               <button type="submit" class="button-save" id="create" disabled>Создать</button>

@@ -1,30 +1,7 @@
 import { openPopup } from "./script.js";
-import { openImage } from "./script.js";
-import { closePopByButton } from "./script.js";
-const imgCard = document.querySelector(".popup__container-img");
-const textCard = document.querySelector(".popup__image-text");
-const popupImg = document.getElementById("image");
 
 
-/*
-function openPopup(popup) {
-  popup.classList.add("popup_non");
-  document.addEventListener ("keydown", closePopByButton);
-}
 
-function openImage(cardElem) {
-  const cardImage = cardElem.querySelector('.element__img');
-  cardImage.addEventListener('click', function() {
-      openPopup(popupImg);
-  });
-}
-
-function closePopByButton (ev) {
-  if (ev.key === "Escape") {
-   closePopup(document.querySelector(".popup_non"))
-  }
-}
-*/
 export class Card {
   constructor({ name, link }, templateSelector) {
     this._name = name;
@@ -42,11 +19,15 @@ export class Card {
   }
 
   _openPopup() {
+    const imgCard = document.querySelector(".popup__container-img");
+    const textCard = document.querySelector(".popup__image-text");
+    const placeBigImage = document.querySelector(".popup_type_big-img");
     imgCard.src =  this._link;
     textCard.textContent = this._name;
     imgCard.alt = this._name;
-    const cardElem = this._place
-    openImage(cardElem)
+    /*const cardElem = this._place
+    openImage(cardElem)*/
+    openPopup(placeBigImage)
   }
 
   _likeCard(evt) {

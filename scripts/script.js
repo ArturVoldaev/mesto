@@ -3,12 +3,13 @@ import { FormValidator } from "./formValidator.js";
 
 const buttonEdit = document.querySelector(".user__edit");
 const popupProfile = document.querySelector("#editProfile");
-const buttonEditCross = document.querySelector(".popup__close");
-const nameInput = document.querySelector('.form__style');
-const jobInput = document.querySelector('.form__style-profession');
+const editPopup = document.querySelector(".popup_type_edit-profile");
+const buttonEditCross = editPopup.querySelector(".popup__close");
+const nameInput = document.querySelector('.form__style_type_name');
+const jobInput = document.querySelector('.form__style_type_profession');
 const fieldName = document.querySelector(".user__name");
 const fieldProfession = document.querySelector(".user__profession");
-const buttonEditSubmit = document.querySelector(".form");
+const formEditProrile = document.querySelector(".form_type_edit-profile");
 const buttonNewCard = document.querySelector(".user__add-btn");
 const popupNewCard = document.querySelector("#addButton");
 const buttonNewCardCross = document.querySelector("#addButton__close");
@@ -19,8 +20,9 @@ const fieldUrl = document.getElementById("NewPicture");// адрес новой 
 const buttonSubmitCreation = document.querySelector("#create");
 const inputProfile = document.getElementById("proFile");
 const popupImg = document.getElementById("image");
-const buttonImgCross = document.getElementById("image__close");
-const formNewPlace = document.querySelector(".form_type_addPlace")
+const bigImgPopup = document.querySelector(".popup_type_big-img");
+const buttonImgCross = bigImgPopup.querySelector(".popup__close");
+const formNewPlace = document.querySelector(".form_type_add-place")
 const popupAddPlace = document.querySelector(".popup_type_add-place")
 
 const configSelectors = {
@@ -79,7 +81,7 @@ function closePopByMouse () {
   })
 }
 
-export function closePopByButton (ev) {
+function closePopByButton (ev) {
   if (ev.key === "Escape") {
    closePopup(document.querySelector(".popup_non"))
   }
@@ -116,14 +118,14 @@ function resetForm (idForm) {
   idForm.reset()
 }
 
-export function openImage(cardElem) {
+function openImage(cardElem) {
   const cardImage = cardElem.querySelector('.element__img');
   cardImage.addEventListener('click', function() {
       openPopup(popupImg);
   });
 }
 
-buttonEditSubmit.addEventListener('submit', handlFormSubmit);
+formEditProrile.addEventListener('submit', handlFormSubmit);
 
 buttonEdit.addEventListener("click" , openPopupProfile);
 
