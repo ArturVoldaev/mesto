@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./pages/index.css">
   <title>Удивительные места России</title>
 </head>
 <body class="body">
   <div class="page">
     <header class="header">
-      <img class="logo" src="./images/Vector.svg" alt="Логотип">
+      <img class="logo" src="<%=require('./images/Vector.svg')%>" alt="Логотип">
     </header >
     <main>
       <section class="">
@@ -26,7 +25,7 @@
               </div>
               <button type="submit" class="button-save">Сохранить</button>
             </form>
-            <button type="button" class="popup__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
+            <button type="button" class="popup__close"><img class="popup__close-img" src="<%=require('./images/Close-Icon.svg')%>" alt="Кнопка редактировать"></button >
           </div>
         </div>
         <div class="popup popup_type_add-place" id = "addButton">
@@ -34,38 +33,38 @@
             <h2 class="popup__heading">Новое место</h2>
             <form class="form form_type_add-place" id="buttonNewPlace" name="newPlace" novalidate>
               <div class="form__place">
-                <input class="form__style" type="text" placeholder="Название" value="" name="placeName" autocomplete="off" id="NewPlace" minlength="2" maxlength="30" required>
+                <input class="form__style" type="text" placeholder="Название" value="" name="name" autocomplete="off" id="NewPlace" minlength="2" maxlength="30" required>
                 <span class="form__style-error" id="NewPlace-error"></span>
-                <input class="form__style form__style_type_link" type="url" placeholder="Ссылка на картинку" value="" name="placeLink" autocomplete="off" id="NewPicture" required>
+                <input class="form__style form__style_type_link" type="url" placeholder="Ссылка на картинку" value="" name="link" autocomplete="off" id="NewPicture" required>
                 <span class="form__style-error" id="NewPicture-error"></span>
               </div>
               <button type="submit" class="button-save" id="create" disabled>Создать</button>
             </form>
-            <button type="button" class="popup__close" id = "addButton__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
+            <button type="button" class="popup__close" id = "addButton__close"><img class="popup__close-img" src="<%=require('./images/Close-Icon.svg')%>" alt="Кнопка редактировать"></button >
           </div>
         </div>
         <div class="popup popup_type_big-img" id = "image">
           <div class="popup__container">
-            <img class="popup__container-img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Изображение добавленное пользователем">
+            <img class="popup__container-img" src="" alt="123">
             <h2 class="popup__image-text">Новое место</h2>
-            <button type="button" class="popup__close" id = "image__close"><img class="popup__close-img" src="./images/Close-Icon.svg" alt="Кнопка редактировать"></button >
+            <button type="button" class="popup__close" id = "image__close"><img class="popup__close-img" src="<%=require('./images/Close-Icon.svg')%>" alt="Кнопка редактировать"></button >
           </div>
         </div>
       </section>
       <section class="profile">
         <div class="user">
           <div class="user__place">
-            <img class="user__avatar-palce" src="./images/kusto.png" alt="Аватар">
+            <img class="user__avatar-palce" src="<%=require('./images/kusto.png')%>" alt="Аватар">
             <div class="user__info">
               <div class="user__up">
                 <h1 class="user__name">Жак-Ив Кусто</h1>
-                <button class="user__edit" type="button"><img class="user__edit-img" src="./images/Edit-Button-small.svg" alt="Кнопка редактировать пользователя"></button>
+                <button class="user__edit" type="button"><img class="user__edit-img" src="<%=require('./images/Edit-Button-small.svg')%>" alt="Кнопка редактировать пользователя"></button>
               </div>
               <p class="user__profession">Исследователь океана</p>
             </div>
           </div>
           <button class="user__add-btn" type="button">
-            <img class="user__add-btn-img" src="./images/plus.svg" alt="Добавить">
+            <img class="user__add-btn-img" src="<%=require('./images/plus.svg')%>" alt="Добавить">
           </button>
         </div>
       </section>
@@ -122,7 +121,7 @@
     <template id="user">
       <article class="element">
         <img class="element__img" alt="Изображение места">
-        <a class="element__trash" href="#"><img src="./images/Group.svg" alt="Изображение корзины"></a>
+        <a class="element__trash" href="#"><img src="<%=require('./images/Group.svg')%>" alt="Изображение корзины"></a>
         <div class="element__conteiner">
           <h2 class="element__name">Новое место</h2>
          <button class="element__like" type="button"></button>
@@ -130,6 +129,5 @@
       </article>
     </template>
   </div>
-  <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>
