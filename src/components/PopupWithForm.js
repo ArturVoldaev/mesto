@@ -4,9 +4,12 @@ export class PopupWithForm extends Popup {
   constructor(selectorPopup, formSubmitAll) {
     super(selectorPopup)
     this._formSubmitAll = formSubmitAll;
+    this._popup = super.focusPopup();
+    this._inputSelectors = this._popup.querySelectorAll('.form__style');
+
   }
   close() {
-    this._selectorPopup.querySelector('.form').reset();
+    this._popup.querySelector('.form').reset();
     super.close();
   }
   setEventListeners() {
@@ -18,11 +21,11 @@ export class PopupWithForm extends Popup {
     }
 
  _getInputValues = () => {
-    const inputForms = Array.from(this._selectorPopup.querySelectorAll('.form__style'));
-    let inputField = {};
-    const inputFields = inputForms.forEach((elem) => {
-      inputField[elem.name] = elem.value;
+    this._inputForms = Array.from(this._inputSelectors);
+    this._inputField = {};
+    this._inputForms.forEach((elem) => {
+      this._inputField[elem.name] = elem.value;
     });
-    return inputField;
+    return this._inputField;
   }
 }

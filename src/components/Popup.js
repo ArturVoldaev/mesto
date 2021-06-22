@@ -31,4 +31,8 @@ export class Popup {
         }
     })
   }
+
+  focusPopup() {
+    return this._selectorPopup;
+  }
 }
