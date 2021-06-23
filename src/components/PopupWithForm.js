@@ -6,10 +6,10 @@ export class PopupWithForm extends Popup {
     this._formSubmitAll = formSubmitAll;
     this._popup = super.focusPopup();
     this._inputSelectors = this._popup.querySelectorAll('.form__style');
-
+    this._formElement = this._popup.querySelector('.form');
   }
   close() {
-    this._popup.querySelector('.form').reset();
+    this._formElement.reset();
     super.close();
   }
   setEventListeners() {
